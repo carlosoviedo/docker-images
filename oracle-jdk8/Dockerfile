@@ -1,8 +1,8 @@
 FROM debian:jessie
 MAINTAINER carlos.oviedo@gmail.com
 
-ARG JAVA_VERSION=8
-ARG PACKAGE_VERSION=8u66+8u65arm-1~webupd8~1
+ENV JAVA_VERSION ${JAVA_VERSION:-8}
+ENV PACKAGE_VERSION ${PACKAGE_VERSION:-8u66+8u65arm-1~webupd8~1}
 
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list && \
     echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list && \
