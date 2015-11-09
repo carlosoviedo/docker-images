@@ -12,4 +12,4 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ENV ATLAS_HOME /usr/share/atlassian-plugin-sdk-6.1.0
+ENV ATLAS_HOME /usr/share/atlassian-plugin-sdk-$SDK_PACKAGE_VERSION
